@@ -2,7 +2,7 @@ import 'package:delivery_app/pages/authPage.dart';
 import 'package:delivery_app/pages/loginPage.dart';
 import 'package:delivery_app/pages/homePage.dart';
 import 'package:delivery_app/pages/registrationPage.dart';
-import 'package:delivery_app/pages/signup_success_page.dart';
+import 'package:delivery_app/pages/registrationSuccess.dart';
 import 'package:delivery_app/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -22,14 +22,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      // home: AuthPage(),
-      home: RegistrationPage(),
+      home: AuthPage(),
+      // home: RegistrationPage(),
       // initialRoute: AppRoutes.loginRoute,
       routes: {
         AppRoutes.loginRoute: (context) => LoginPage(),
         AppRoutes.homeRoute: (context) => HomePage(),
         AppRoutes.signupRoute: (context) => RegistrationPage(),
-        AppRoutes.signupSuccessRoute: (context) => SignupSuccessPage()
       },
       debugShowCheckedModeBanner: false,
     );

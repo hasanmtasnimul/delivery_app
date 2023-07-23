@@ -2,6 +2,8 @@ import 'package:delivery_app/components/formButton.dart';
 import 'package:delivery_app/utils/routes.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:quickalert/quickalert.dart';
+import 'package:quickalert/widgets/quickalert_buttons.dart';
 import '../components/formTextField.dart';
 
 class RegistrationPage extends StatefulWidget {
@@ -29,7 +31,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
             email: emailController.text, password: passwordController.text);
         Navigator.pop(context);
+        QuickAlert.show(
+            context: context,
+            type: QuickAlertType.success,
+            text: "Registration Successful");
       } else {
+        Navigator.pop(context);
         registrationError("Passwords did not match");
       }
     } on FirebaseAuthException catch (e) {
@@ -61,7 +68,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               child: Column(children: [
                 SizedBox(height: 100),
                 Text(
-                  "Register",
+                  "Registration",
                   style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                 ),
                 // SizedBox(height: 10),

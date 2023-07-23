@@ -25,7 +25,8 @@ class FormTextField extends StatelessWidget {
           prefixIcon: fieldIcon,
           hintText: hintText,
           labelText: hintText,
-          labelStyle: TextStyle(fontWeight: FontWeight.bold),
+          labelStyle:
+              TextStyle(fontWeight: FontWeight.bold, color: Colors.blue[900]),
           enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.white),
           ),
