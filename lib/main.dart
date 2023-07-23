@@ -2,7 +2,6 @@ import 'package:delivery_app/pages/authPage.dart';
 import 'package:delivery_app/pages/loginPage.dart';
 import 'package:delivery_app/pages/homePage.dart';
 import 'package:delivery_app/pages/registrationPage.dart';
-import 'package:delivery_app/pages/registrationSuccess.dart';
 import 'package:delivery_app/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
